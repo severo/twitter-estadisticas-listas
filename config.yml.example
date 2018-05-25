@@ -3,3 +3,11 @@ keys:
   consumer_secret: 123
   access_token_key: 123
   access_token_secret: 123
+lists:
+  - user: payorivero
+    list: monit-medios
+  - user: payorivero
+    list: instituciones-públicas
+export:
+  filepath: /tmp/
+  filename_base: listas
