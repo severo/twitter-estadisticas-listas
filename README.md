@@ -9,7 +9,7 @@ Primero instalar el entorno necesario, ver [INSTALL.md](INSTALL.md).
 Luego llamar el script con:
 
 ```bash
-python get_list_statistics.py
+python3 get_list_statistics.py
 ```
 
 El resultado se encuentra en el archivo especificado en `config.yml`, por ejemplo, si `config.yml` contiene:
