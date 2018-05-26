@@ -4,8 +4,7 @@ import time
 import twitter
 import yaml
 
-
-with open("config.yml", 'r') as ymlfile:
+with open(os.path.join(os.getenv('SCRIPT_DIRECTORY', './'), "config.yml"), 'r') as ymlfile:
     cfg = yaml.load(ymlfile)
 
 # Creación del archivo CSV de exportación
