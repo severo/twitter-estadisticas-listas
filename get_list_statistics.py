@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import os
 import time
 import twitter
@@ -23,13 +24,13 @@ with open(csvFileName,'wt') as file:
     for list in cfg["lists"]:
         results = api.GetListMembers(slug=list["list"], owner_screen_name=list["user"], skip_status=False, include_entities=False)
         for r in results:
-            rowStr = "\"" + str(list["user"]) + "\""
-            rowStr += "," + "\"" + str(list["list"]) + "\""
-            rowStr += "," + "\"" + str(r.screen_name) + "\""
-            rowStr += "," + "\"" + str(r.name) + "\""
-            rowStr += "," + "\"" + str(r.followers_count) + "\""
-            rowStr += "," + "\"" + str(r.friends_count) + "\""
-            rowStr += "," + "\"" + str(r.statuses_count) + "\""
+            rowStr = "\"" + list["user"].encode('utf-8') + "\""
+            rowStr += "," + "\"" + list["list"].encode('utf-8') + "\""
+            rowStr += "," + "\"" + r.screen_name.encode('utf-8') + "\""
+            rowStr += "," + "\"" + r.name.encode('utf-8') + "\""
+            rowStr += "," + "\"" + unicode(r.followers_count).encode('utf-8') + "\""
+            rowStr += "," + "\"" + unicode(r.friends_count).encode('utf-8') + "\""
+            rowStr += "," + "\"" + unicode(r.statuses_count).encode('utf-8') + "\""
             if r.status:
                 rowStr += "," + "\"" + time.strftime('%Y-%m-%d %H:%M:%S', time.strptime(r.status.created_at,"%a %b %d %H:%M:%S +0000 %Y")) + "\""
             else:
