@@ -20,11 +20,11 @@ headerStr = "usuario_lista,lista,usuario,nombre,seguidores,siguiendo,tweets,ulti
 with open(csvFileName,'w') as file:
     file.write(headerStr)
     file.write('\n')
-    for list in cfg["lists"]:
-        results = api.GetListMembers(slug=list["list"], owner_screen_name=list["user"], skip_status=False, include_entities=False)
+    for lista in cfg["lists"]:
+        results = api.GetListMembers(slug=lista["list"], owner_screen_name=lista["user"], skip_status=False, include_entities=False)
         for r in results:
-            rowStr = "\"" + list["user"] + "\""
-            rowStr += "," + "\"" + list["list"] + "\""
+            rowStr = "\"" + lista["user"] + "\""
+            rowStr += "," + "\"" + lista["list"] + "\""
             rowStr += "," + "\"" + r.screen_name + "\""
             rowStr += "," + "\"" + r.name + "\""
             rowStr += "," + "\"" + str(r.followers_count) + "\""
