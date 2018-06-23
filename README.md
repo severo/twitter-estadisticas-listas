@@ -1,5 +1,7 @@
 # twitter-estadisticas-listas
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/5c0e1f6c5ebf4c44834b81cb2cfc0a44)](https://www.codacy.com/app/severo/twitter-estadisticas-listas?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=severo/twitter-estadisticas-listas&amp;utm_campaign=Badge_Grade)
+
 Un script para sacar estadísticas de las cuentas de una lista.
 
 ## Uso
