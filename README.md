@@ -1,5 +1,7 @@
 # twitter-estadisticas-listas
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/5c0e1f6c5ebf4c44834b81cb2cfc0a44)](https://www.codacy.com/app/severo/twitter-estadisticas-listas?utm_source=github.com&utm_medium=referral&utm_content=severo/twitter-estadisticas-listas&utm_campaign=Badge_Grade)
+
 A script to get some statistics (followers, follows, tweets, last tweet) about accounts of a Twitter list.
 
 ## Use
