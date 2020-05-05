@@ -21,8 +21,8 @@ with open(csvFileName,'w') as file:
     file.write(headerStr)
     file.write('\n')
     for lista in cfg["lists"]:
-        results = api.GetListMembers(slug=lista["list"], owner_screen_name=lista["user"], skip_status=False, include_entities=False)
-        for r in results:
+        results = api.GetListMembersPaged(slug=lista["list"], owner_screen_name=lista["user"], skip_status=False, include_entities=False, count=10000)
+        for r in results[2]:
             rowStr = "\"" + lista["user"] + "\""
             rowStr += "," + "\"" + lista["list"] + "\""
             rowStr += "," + "\"" + r.screen_name + "\""
